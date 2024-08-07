@@ -1,6 +1,6 @@
 import styles from './css/Select.module.css'
 
-const Select = ({text, name, options, handleOnChange, value}) => {
+const Select = ({text, name, options = [], handleOnChange, value}) => {
     return (
     <div className={styles.form_control}>
         <label htmlFor={name}>{text}</label>
@@ -8,7 +8,10 @@ const Select = ({text, name, options, handleOnChange, value}) => {
         name={name} 
         onChange={handleOnChange} 
         value={value}>
-            <option disabled selected>Selecione uma opção</option>
+            <option value={'defaultOption'} default>Selecione uma opção</option>
+            {options.map((option) => (
+                <option value={option.id} key={option.id}>{option.name}</option>
+            ))}
         </select>
     </div>
     )
