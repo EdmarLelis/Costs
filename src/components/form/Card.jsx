@@ -6,22 +6,22 @@ const Card = ({type = 'warning', tone = 'light', text}) => {
         warning: {
           title: 'Aviso',
           classes: {
-            light: styles['warning-light'], // Corrigido para 'light'
-            dark: styles['warning-dark'],   // Corrigido para 'dark'
+            light: styles['warning-light'],
+            dark: styles['warning-dark'],
           },
         },
         success: {
           title: 'Sucesso',
           classes: {
-            light: styles['success-light'], // Corrigido para 'light'
-            dark: styles['success-dark'],   // Corrigido para 'dark'
+            light: styles['success-light'],
+            dark: styles['success-dark'],
           },
         },
         error: {
           title: 'Erro!',
           classes: {
-            light: styles['error-light'],   // Corrigido para 'light'
-            dark: styles['error-dark'],     // Corrigido para 'dark'
+            light: styles['error-light'],
+            dark: styles['error-dark'],
           },
         },
     };
